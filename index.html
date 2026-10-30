@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRIVE X | Premium Cars</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">DRIVE<span>X.</span></div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#cars">Cars</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-btn" onclick="document.getElementById('cars').scrollIntoView()">Explore Cars</button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="tag">THE FUTURE OF DRIVING</p>
+        <h1>DRIVE YOUR<br><span>DREAMS.</span></h1>
+        <p>Discover the world's most exclusive luxury and sports cars.</p>
+        <a href="#cars" class="main-btn">Explore Collection ↗</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200"
+        alt="Luxury sports car">
+        <div class="floating-text">PORSCHE 911</div>
+    </div>
+</section>
+
+<section class="stats">
+    <div><h2>500+</h2><p>Premium Cars</p></div>
+    <div><h2>350+</h2><p>Happy Customers</p></div>
+    <div><h2>50+</h2><p>Luxury Brands</p></div>
+    <div><h2>24/7</h2><p>Customer Support</p></div>
+</section>
+
+<section class="cars-section" id="cars">
+    <div class="section-heading">
+        <p class="tag">OUR COLLECTION</p>
+        <h2>FIND YOUR <span>PERFECT RIDE</span></h2>
+        <input type="text" id="search" placeholder="Search your dream car...">
+    </div>
+
+    <div class="filters">
+        <button class="active" onclick="filterCars('All',this)">All Cars</button>
+        <button onclick="filterCars('Sports',this)">Sports</button>
+        <button onclick="filterCars('Luxury',this)">Luxury</button>
+        <button onclick="filterCars('SUV',this)">SUV</button>
+    </div>
+
+    <div class="car-grid" id="carGrid"></div>
+</section>
+
+<section class="about" id="about">
+    <div>
+        <p class="tag">WHY DRIVE X?</p>
+        <h2>MORE THAN JUST<br><span>A CAR.</span></h2>
+        <p>We bring you an extraordinary collection of premium automobiles. Experience luxury, performance and technology in one place.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1000" alt="Luxury car">
+</section>
+
+<footer id="contact">
+    <h2>DRIVE<span>X.</span></h2>
+    <p>Your dream car is just one click away.</p>
+    <p>© 2026 DRIVE X. All Rights Reserved.</p>
+</footer>
+
+<div class="modal" id="carModal">
+    <div class="modal-content">
+        <button class="close" onclick="closeModal()">✕</button>
+        <img id="modalImage" src="" alt="Selected car">
+        <h2 id="modalName"></h2>
+        <h3 id="modalPrice"></h3>
+        <p id="modalDescription"></p>
+        <button class="main-btn" onclick="alert('Demo only! Contact the dealership to purchase.')">Buy Now ↗</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
